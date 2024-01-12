@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 const StyleButton = styled(Text)<any>``;
 
 export interface ButtonBaseProps {
-  tag?: string;
   children: React.ReactNode;
   textVariant?: ThemeTypographyVariants;
   styleSheet?: StyleSheet;
@@ -18,7 +17,6 @@ export interface ButtonBaseProps {
 }
 
 export default function ButtonBase({
-  tag,
   children,
   styleSheet,
   href,
@@ -27,28 +25,28 @@ export default function ButtonBase({
 }: ButtonBaseProps) {
   const router = useRouter();
   const ref = React.useRef();
-  useRipple(ref, {
-    animationLength: 400,
-    rippleColor: 'rgba(255, 255, 255, 0.8)',
-  });
-
   const isLink = Boolean(href);
-  tag = isLink ? 'a' : 'button';
+  const Tag = isLink ? 'a' : 'button';
+
+  useRipple(ref, {
+    animationLength: 600,
+    rippleColor: 'rgba(255, 255, 255, 0.7)',
+  });
 
   return (
     <StyleButton
-      tag={tag}
+      tag={Tag}
       href={href}
+      ref={ref}
       styleSheet={{
-        ...styleSheet,
-        colort: 'inherit',
+        color: 'inherit',
         border: '0',
         backgroundColor: 'transparent',
         outline: '0',
         cursor: 'pointer',
         textDecoration: 'none',
+        ...styleSheet,
       }}
-      ref={ref}
       onClick={(event) => {
         isLink && event.preventDefault();
         isLink && router.push(href);

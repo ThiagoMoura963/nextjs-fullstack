@@ -4,7 +4,7 @@ import { ColorVariant, Variant, colorVariantButton } from "./ColorVariantButton"
 import { ButtonSize, buttonSize } from "./ButtonSize";
 import { useTheme } from "@src/theme/ThemeProvider";
 
-interface ButtonProps extends ButtonBaseProps{
+interface ButtonProps extends ButtonBaseProps {
   children: React.ReactNode;
   fullWidth?: boolean;
   colorVariant?: ColorVariant;
@@ -21,6 +21,8 @@ export default function Button({
   size,
 }: ButtonProps) {
   const theme = useTheme();
+
+  // console.log(colorVariantButton(theme, 'primary', 'outlined'));
 
   return (
   <ButtonBase
