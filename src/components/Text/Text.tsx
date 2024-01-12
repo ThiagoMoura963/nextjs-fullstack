@@ -10,7 +10,7 @@ interface Textprops {
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
   ref: any;
-  className?: any
+  className?: any;
 }
 
 const Text = React.forwardRef(({
