@@ -17,7 +17,6 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.47",
     "babel-plugin-styled-components": "^2.1.4"
   }
 }
