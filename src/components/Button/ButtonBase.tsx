@@ -1,10 +1,10 @@
 import React from "react"
-import styled from "styled-components"
 import Text from "../Text/Text"
-import { ThemeTypographyVariants } from "@src/theme/theme";
-import { StyleSheet } from "@src/theme/StyleSheet";
-import { useRipple } from "react-use-ripple";
+import styled from "styled-components"
 import { useRouter } from "next/router";
+import { useRipple } from "react-use-ripple";
+import { StyleSheet } from "@src/theme/StyleSheet";
+import { ThemeTypographyVariants } from "@src/theme/theme";
 
 const StyleButton = styled(Text)<any>``;
 

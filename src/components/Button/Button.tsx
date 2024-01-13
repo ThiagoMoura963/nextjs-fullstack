@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonBase, { ButtonBaseProps } from "./ButtonBase";
-import { ColorVariant, Variant, colorVariantButton } from "./ColorVariantButton";
-import { ButtonSize, buttonSize } from "./ButtonSize";
+import { ColorVariant, Variant, colorVariantButton } from "./colorVariantButton";
+import { ButtonSize, buttonSize } from "./buttonSize";
 import { useTheme } from "@src/theme/ThemeProvider";
 
 interface ButtonProps extends ButtonBaseProps {
@@ -21,13 +21,12 @@ export default function Button({
   size,
 }: ButtonProps) {
   const theme = useTheme();
-
-  // console.log(colorVariantButton(theme, 'primary', 'outlined'));
-
   return (
   <ButtonBase
     styleSheet={{
       alignSelf: 'flex-start',
+      alignItems: 'center',
+      justifyContent: 'center',
       ...(fullWidth && {
         alignSelf: 'initial',
       }),

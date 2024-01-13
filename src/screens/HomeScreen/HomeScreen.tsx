@@ -14,27 +14,25 @@ export default function HomeScreen() {
     <Box
       tag="main"
       styleSheet={{
-        backgroundColor: theme.colors.neutral.x300,
+        backgroundColor: theme.colors.neutral.x000,
         flex: 1,
         alignItems: "center",
       }}
     >
-      <Link href="/sobre">
-        Vá para a página sobre mim
-      </Link>
-      <Link href="https://www.google.com">
-        Google
-      </Link>
       <Background />
       <Menu />
+      <Feed>
+        <Feed.Header />
+      </Feed>
+      <Footer />
+      {/*
       <Feed>
         <Feed.Header />
         <Text tag="h2" variant="display1">
           Últimas Atualizações
         </Text>
         <Feed.Posts />
-      </Feed>
-      <Footer />
+      </Feed> */}
     </Box>
   )
 }

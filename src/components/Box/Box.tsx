@@ -4,7 +4,7 @@ import { BaseComponent } from "@src/theme/BaseComponent";
 
 interface BoxProps {
   tag?: 'main' | 'div' | 'article' | 'section' | 'ul' | string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   styleSheet?: StyleSheet;
 }
 

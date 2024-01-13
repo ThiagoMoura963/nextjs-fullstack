@@ -74,7 +74,7 @@ const Link = React.forwardRef(({
 
   return (
     <NextLink href={href} passHref style={{ textDecoration: "none" }}>
-      <Text tag='p' {...linkProps} />
+      <Text tag='span' {...linkProps} />
     </NextLink>
   )
 });
