@@ -13,7 +13,6 @@ interface HomeScreenProps {
 
 function HomeScreen(props: HomeScreenProps) {
   const theme = useTheme();
-  console.log(props.posts);
   return (
     <Box
       tag="main"
@@ -33,14 +32,6 @@ function HomeScreen(props: HomeScreenProps) {
         <Feed.Posts posts={props.posts} />
       </Feed>
       <Footer />
-      {/*
-      <Feed>
-        <Feed.Header />
-        <Text tag="h2" variant="display1">
-          Últimas Atualizações
-        </Text>
-        <Feed.Posts />
-      </Feed> */}
     </Box>
   )
 }

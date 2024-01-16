@@ -10,6 +10,7 @@ export interface Post {
     tags: string[];
   },
   slug: string;
+  image?: string;
   title: string;
   content: string;
 }
@@ -31,7 +32,8 @@ export default function PostService() {
             excerpt: data.excerpt,
             tags: data.tags,
           },
-          slug: pathPost.replace(".md", ""),
+          image: data.image || "",
+          slug: postFileName.replace(".md", ""),
           title: data.title,
           content,
         }

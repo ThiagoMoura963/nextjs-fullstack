@@ -3,6 +3,8 @@ import Box from "@src/components/Box/Box";
 import Text from "@src/components/Text/Text";
 import Icon from "@src/components/Icon/Icon";
 import Link from "@src/components/Link/Link";
+import Button from "@src/components/Button/Button";
+import Image from "@src/components/Image/Image";
 
 interface FeedPostProps {
   date: string;
@@ -10,6 +12,7 @@ interface FeedPostProps {
   url: string;
   excerpt: string;
   tags: string[];
+  image?: string;
 }
 
 export default function FeedPost({
@@ -17,7 +20,8 @@ export default function FeedPost({
   title,
   url,
   excerpt,
-  tags
+  tags,
+  image
 }: FeedPostProps) {
   const theme = useTheme();
   const postDate = new Date(date)
@@ -25,8 +29,6 @@ export default function FeedPost({
   .replace('.', ',')
   .replace(/de /g, '');
 
-
-  console.log('data: ', postDate);
   return (
     <Box
       styleSheet={{
@@ -34,36 +36,7 @@ export default function FeedPost({
         paddingBottom: '2rem',
       }}
     >
-      <Box
-        styleSheet={{
-          color: theme.colors.neutral.x300,
-          marginLeft: '-16px',
-          position: 'absolute',
-          top: 0,
-          bottom: 0
-        }}
-      >
-        <Icon
-          name="clock_fill"
-          styleSheet={{
-            transform: 'translate(-50%)',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-          }}
-        />
-        <Box
-          styleSheet={{
-            width: '1px',
-            position: 'absolute',
-            top: '16px',
-            bottom: 0,
-            backgroundColor: 'currentColor'
-          }}
-        >
-      </Box>
-
-      </Box>
+      <FeedPostTimeline />
       <Text
         variant="body4"
         styleSheet={{ fontWeight: 'bold', marginBottom: '32px', marginLeft: '4px' }}
@@ -85,7 +58,7 @@ export default function FeedPost({
               padding: '.25rem',
               backgroundColor: theme.colors.neutral.x200,
               borderRadius: '4px',
-              color: theme.colors.primary.x800,
+              color: theme.colors.neutral.x800,
               hover: {
                 color: theme.colors.primary.x900,
                 backgroundColor: theme.colors.primary.x200
@@ -95,6 +68,99 @@ export default function FeedPost({
             {title}
           </Box>
       </Link>
+      <Text
+        variant="body3"
+        styleSheet={{
+          marginTop: '1.25rem',
+        }}
+      >
+        {excerpt}
+      </Text>
+      <Box
+        styleSheet={{
+          flexDirection: 'row',
+          gap: '.5rem',
+          paddingTop: '1.5rem',
+        }}
+      >
+        {tags.map((tag) => {
+          return (
+            <Link
+              key={tag}
+              variant="body3"
+              colorVariantEnabled={false}
+              href="#"
+              styleSheet={{
+                color: theme.colors.neutral.x800,
+                backgroundColor: theme.colors.neutral.x200,
+                borderRadius: '25px',
+                padding: '.25rem .5rem',
+                hover: {
+                  color: theme.colors.primary.x900,
+                  backgroundColor: theme.colors.primary.x200,
+                }
+              }}
+            >
+              #{tag}
+            </Link>
+          )
+        })}
+      </Box>
+      {image &&
+        <Button.Base
+          href={url}
+          styleSheet={{
+            hover: {
+              opacity: 0.8,
+            }
+          }}
+        >
+          <Image
+            src={image}
+            alt="Descrição da imagem"
+            styleSheet={{
+              width: '100%',
+              borderRadius: '12px',
+              marginTop: '1.5rem'
+            }}
+          />
+        </Button.Base>
+      }
     </Box>
+  )
+}
+
+function FeedPostTimeline() {
+  const theme = useTheme();
+  return (
+    <Box
+    styleSheet={{
+      color: theme.colors.neutral.x300,
+      marginLeft: '-16px',
+      position: 'absolute',
+      top: 0,
+      bottom: 0
+    }}
+  >
+    <Icon
+      name="clock_fill"
+      styleSheet={{
+        transform: 'translate(-50%)',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+      }}
+    />
+    <Box
+      styleSheet={{
+        width: '1px',
+        position: 'absolute',
+        top: '16px',
+        bottom: 0,
+        backgroundColor: 'currentColor'
+      }}
+    >
+    </Box>
+  </Box>
   )
 }

@@ -18,6 +18,7 @@ export default function Feed({ children }: FeedProps) {
   return (
     <Box
       styleSheet={{
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
         backgroundColor: theme.colors.neutral.x000,
         marginTop: '-228px',
         width: '100%',
@@ -113,10 +114,6 @@ Feed.Header = () => {
           return null;
         })}
       </Box>
-      {/* <Icon name="youtube" />
-      <Icon name="twitter" />
-      <Icon name="instagram" />
-      <Icon name="github" />*/}
     </Box>
   )
 }
@@ -132,7 +129,7 @@ Feed.Posts = ({ posts }: FeedPostsProps) => {
         paddingTop: '.5rem',
       }}
     >
-      {posts.map(({ slug, title, metadata }) => {
+      {posts.map(({ slug, title, image, metadata }) => {
         const { date, url, excerpt, tags } = metadata;
         return (
           <FeedPost
@@ -142,6 +139,7 @@ Feed.Posts = ({ posts }: FeedPostsProps) => {
             url={url}
             excerpt={excerpt}
             tags={tags}
+            image={image}
           />
         )
       })}
