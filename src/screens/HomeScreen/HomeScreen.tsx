@@ -2,14 +2,18 @@ import Box from "@src/components/Box/Box";
 import Background from "./patterns/Background/Background";
 import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
-import Text from "@src/components/Text/Text";
 import { Footer } from "./patterns/Footer/Footer";
 import { useTheme } from "@src/theme/ThemeProvider";
-import Link from "@src/components/Link/Link";
+import templatePageHCO from "@src/services/template/templatePageHCO";
+import type { Post } from "@src/services/posts/PostService";
 
-export default function HomeScreen() {
+interface HomeScreenProps {
+  posts: Post[];
+}
+
+function HomeScreen(props: HomeScreenProps) {
   const theme = useTheme();
-
+  console.log(props.posts);
   return (
     <Box
       tag="main"
@@ -17,12 +21,16 @@ export default function HomeScreen() {
         backgroundColor: theme.colors.neutral.x000,
         flex: 1,
         alignItems: "center",
+        fontSize: {
+          sm: '2px'
+        }
       }}
     >
       <Background />
       <Menu />
       <Feed>
         <Feed.Header />
+        <Feed.Posts posts={props.posts} />
       </Feed>
       <Footer />
       {/*
@@ -36,3 +44,7 @@ export default function HomeScreen() {
     </Box>
   )
 }
+
+export default templatePageHCO(HomeScreen, {
+  title: 'Home',
+})

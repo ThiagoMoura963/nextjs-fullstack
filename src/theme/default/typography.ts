@@ -17,6 +17,9 @@ export const typography = {
       },
     },
     heading1: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '700',
         md: '700',
@@ -31,6 +34,9 @@ export const typography = {
       },
     },
     heading2: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '700',
         md: '700',
@@ -45,6 +51,9 @@ export const typography = {
       },
     },
     heading3: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '700',
         md: '700',
@@ -59,6 +68,9 @@ export const typography = {
       },
     },
     heading4: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '700',
         md: '700',
@@ -73,6 +85,9 @@ export const typography = {
       },
     },
     heading5: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '700',
         md: '700',
@@ -87,6 +102,9 @@ export const typography = {
       },
     },
     body1: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '400',
         md: '400',
@@ -100,6 +118,9 @@ export const typography = {
       },
     },
     body2: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '400',
         md: '400',
@@ -113,6 +134,9 @@ export const typography = {
       },
     },
     body3: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '400',
         md: '400',
@@ -126,6 +150,9 @@ export const typography = {
       },
     },
     body4: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '400',
         md: '400',
@@ -139,6 +166,9 @@ export const typography = {
       },
     },
     body5: {
+      letterSpacing: {
+        xs: '-0.4px',
+      },
       fontWeight: {
         xs: '400',
         md: '400',

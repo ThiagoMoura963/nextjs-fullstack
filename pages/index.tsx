@@ -1,22 +1,14 @@
+import { withTemplateConfig } from "@src/services/template/withTemplateConfig";
+import PostService from "@src/services/posts/PostService";
+
 export { default } from "@src/screens/HomeScreen/HomeScreen";
 
-// import Box from "@src/components/Box";
-// import theme from "@src/theme/theme";
-
-// export default function HomeScreen() {
-//   return (
-//     <Box
-//       tag="main"
-//       styleSheet={{
-//         fontFamily: theme.typography.fontFamily,
-//         backgroundColor: {
-//           xs: "blue",
-//           md: "red",
-//           sm: "purple"
-//         }
-//       }}
-//     >
-//       Hello World!
-//     </Box>
-//   )
-// }
+export async function getStaticProps() {
+  const posts = await PostService().getAll();
+  console.log('posts ', posts);
+  return {
+    props: await withTemplateConfig({
+      posts,
+    })
+  }
+}

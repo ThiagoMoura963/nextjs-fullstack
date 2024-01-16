@@ -21,7 +21,7 @@ export function Footer() {
       <Text
         variant="body2"
       >
-        Desenvolvido por Thiago Moura.
+        &copy; {new Date().getFullYear()} Desenvolvido por Thiago Moura.
       </Text>
     </Box>
   )

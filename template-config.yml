@@ -1,0 +1,11 @@
+site:
+  title: "Thiago Moura - Timeline"
+  description: "Bem-vindo a minha timeline pessoal"
+personal:
+  name: "Thiago Moura"
+  avatar: "https://github.com/ThiagoMoura963.png"
+  socialNetworks:
+    linkedin: "https://www.linkedin.com/in/thiago-moura-b3b211207/"
+    github: "https://github.com/ThiagoMoura963"
+    twitter: "https://twitter.com/home"
+    instagram: "https://www.instagram.com/thiagomoura963/"
