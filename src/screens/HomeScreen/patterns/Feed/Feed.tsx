@@ -73,7 +73,7 @@ Feed.Header = () => {
           }}
         >
           <Box styleSheet={{flex: '1', justifyContent: 'space-between', display: {xs: 'none', md: 'flex'}}}>
-            <Button fullWidth colorVariant="primary" size="xl" href="/">
+            <Button href="/newsletter" fullWidth colorVariant="primary" size="xl">
               Newsletter
             </Button>
             <Button fullWidth colorVariant="neutral" size="xl" href="/">
@@ -81,7 +81,7 @@ Feed.Header = () => {
             </Button>
           </Box>
           <Box styleSheet={{flex: '1', justifyContent: 'space-between', display: {xs: 'flex', md: 'none'}}}>
-            <Button fullWidth colorVariant="primary" size="xs" href="/">
+            <Button href="/newsletter" fullWidth colorVariant="primary" size="xs">
               Newsletter
             </Button>
             <Button fullWidth colorVariant="neutral" size="xl" href="/">
