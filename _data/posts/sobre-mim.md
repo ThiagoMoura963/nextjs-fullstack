@@ -2,7 +2,7 @@
 date: 2024-01-15
 title: "Minhas experiências como desenvolvedor"
 url: https://www.linkedin.com/in/thiago-moura-b3b211207/
-excerpt: "Minha jornada no mundo da programação..."
+excerpt: "Teste"
 tags:
   - frameworks
   - frontend
