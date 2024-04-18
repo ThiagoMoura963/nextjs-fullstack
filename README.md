@@ -26,10 +26,4 @@ Este é o meu blog pessoal onde compartilho meus pensamentos, ideias e experiên
     ```bash
     npm run dev
     ```
-3. Certifique-se de configurar corretamente as variáveis de ambiente antes de iniciar o servidor. Crie um arquivo `.env` e ajuste os valores conforme necessário:
-    ```bash
-    SUPABASE_URL=https://nraejbdjurlhyhdwayzn.supabase.co
-    SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yYWVqYmRqdXJsaHloZHdheXpuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ0OTYxMSwiZXhwIjoyMDIxMDI1NjExfQ.MWnyZo_nR6Wv5kgR4GNOdEfj1eSfb41rvItj5t-8em4
-    SENDGRID_KEY=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
-    ```
 
